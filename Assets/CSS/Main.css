@@ -1,0 +1,184 @@
+:root {
+    /* Color Palette: Complementary */
+    --dark: #1B6642;
+    --light: #74FCBB;
+    --mid: #42B87F;
+    --dark2: #7A2014;
+    --light2: #B85042;
+
+    /* Maybe make font variables? */
+
+}
+
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 72px;
+}
+
+h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+p {
+    font-size: 24px;
+}
+
+/*
+Think about it.
+text-transform: capitalize;
+*/
+
+/* Think about setting all h elements to certain weights AND sizes */
+
+#navbar {
+    position: absolute;
+    padding: 20px 0 0 0;
+}
+
+.navText {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.navText:visited {
+    text-decoration: none;
+}
+
+.navText:hover {
+    text-decoration: underline;
+    background-color: white;
+    color: black;
+}
+
+
+#welcome-section {
+    /* Browser Fallback
+    background-image: linear-gradient(to bottom, *dark but hex*, *light but hex*);
+    */
+
+    /* Used if color can't be found 
+    background-image: linear-gradient(to bottom, var(--dark, *fallback*), var(--light, *fallback*));
+    */
+
+    /* Makes sense to use variables for initial development and concepts due to being easy to change.
+        Implement browser compatability and fallbacks LATER, AFTER the website nears its completion */
+
+    background-image: linear-gradient(45deg, var(--dark), var(--mid));
+    margin: 0;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introText  {
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 72px;
+    opacity: .5;
+}
+
+.introSubtext {
+    color: var(--light);
+    padding-bottom: 35vh;
+    margin-top: 92px;
+    margin-bottom: 0px;
+    font-family: 'Roboto Mono', monospace;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+
+.inputCursor {
+    display: inline-block;
+    width: 2px;
+    height: 68px;
+    background-color: white;
+    margin-left: 12px;
+    animation: blink .6s linear infinite alternate;
+}
+
+.sectionHeaderText {
+    margin: 0;
+    text-align: center;
+    font-size: 52px;
+    padding: 40px 0px;
+}
+
+#aboutMe {
+    background-color: white;
+    margin: 0;
+}
+
+.aboutMeSectionHeaderText {
+    color: var(--dark2);
+    text-align: center;
+    font-size: 52px;
+    padding: 40px 0px;
+    margin: 0px;
+}
+
+.aboutMeText {
+    text-align: center;
+    color: var(--dark2);
+    font-family: 'Roboto mono', monospace;
+    font-weight: 300;
+    margin: 0 10vh;
+    padding-bottom: 20vh;
+    padding-top: 5vh;
+    line-height: 52px;
+}
+
+#projects {
+    background-image: linear-gradient(90deg, var(--mid), var(--dark));
+    margin: 0;
+    color: white;
+}
+
+@media(max-width: 1200px) {
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-right:  10vw;
+        margin-left: 10vw;
+    }
+
+    .introText {
+        margin: 0 10vw;
+
+    }
+
+    .sectionHeaderText {
+        font-size: 38px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .aboutMeText {
+        margin: 0 10vw;
+        text-align: center;
+    }
+
+}
