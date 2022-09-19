@@ -6,22 +6,40 @@
     <head>
 
         <title>Hello! Welcome to the home page.</title>
+        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="Assets/CSS/Main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+        
+        <!-- normalize.css -->
+        <link rel="stylesheet" type="text/css" href="Assets/CSS/normalize.css">
+
+        <!-- My CSS -->
+        <link rel="stylesheet" type="text/css" href="Assets/CSS/Main.css">
+
+        <!-- FullPage.Js CSS -->
+        <link rel="stylesheet" type="text/css" href="fullPage.js-master/dist/fullpage.css" />
 
     </head>
-    <body style="margin: 0;">
-        <nav id="navbar">
-            <a href="G:\Projects\Code\Website\AboutMe.html" class="navText">About Me :D</a>
-            <a href="G:\Projects\Code\Website\Projects.html" class="navText">Projects :')</a>
-        </nav>
-        <div id="welcome-section">
-            <span id="introText" class="introText"></span>
-            <span class="inputCursor"></span>
+    <body>
+        <div id="fullpage">
+            <div id="greeting-section" class="section">
+                <img id="large-portrait" src="Assets/meSittingPortfolio.png">
+                <h1 id="hook">Hello,<br>I'm Isaac.</h1>
+            </div>
+            <div id="about-section" class="section">
+                section2
+            </div>
+            <div id="projects-section" class="section">
+                section3
+            </div> 
         </div>
+
+        <script type="text/javascript" src="fullPage.js-master/dist/fullpage.js"></script>
+        <script type="text/javascript">
+            new fullpage('#fullpage', {
+                licenseKey: 'gplv3-license'
+            });
+        </script>
     </body>
 </html>
-
-<script type="text/javascript" src="G:\Projects\Code\Website\Assets\JS\TypingEffect.js"></script>
