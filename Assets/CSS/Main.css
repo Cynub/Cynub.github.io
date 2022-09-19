@@ -22,7 +22,7 @@ body {
 #large-portrait {
     position: absolute;
     bottom: 0px;
-    right: 0px;
+    right: 5vw;
     height: 70vh;
 }
 
