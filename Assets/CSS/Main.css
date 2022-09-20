@@ -1,7 +1,8 @@
 :root {
     /* Color Palette: Complementary */
     --dark: #1B6642;
-    --light: #74FCBB;
+    /* --light: #74FCBB; */
+    --light: #99FF99;
     --mid: #42B87F;
     --dark2: #7A2014;
     --light2: #B85042;
@@ -32,7 +33,7 @@ body {
         Implement browser compatability and fallbacks LATER, AFTER the website nears its completion */
 
     /* background-image: linear-gradient(45deg, var(--dark), var(--mid)); */
-    background-image: url("../1x/Asset\ 5.png");
+    background-image: url("../1x/Asset\ 8.png");
     background-size: cover;
     background-position: right bottom;
     color: white;
@@ -40,41 +41,93 @@ body {
 
 #greeting-text {
     margin-left: 10vw;
-    color: white
+    color: white;
+    width: 42%;
+    
 }
 
 #greeting-text h5 {
     color: var(--light);
     font-size: 2vw;
     margin:0;
+    animation: hi-fade-in 2s;
+}
+
+@keyframes hi-fade-in {
+    0% {
+        opacity: 0;
+        translate: 0% 40%
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0% 0%;
+    }
 }
 
 #greeting-text h1 {
-    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 4px;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    /* -webkit-text-stroke-width: 3px; */
     -webkit-text-stroke-color: white;
-    font-size: 7vw;
+    font-size: 7.5vw;
     margin:0;
+    animation: name-fade-in 3s;
+}
+
+@keyframes name-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+        translate: 0% 40%
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0% 0%;
+    }
 }
 
 #greeting-text p {
     font-weight: 300;
-    font-size: 1vw;
+    font-size: 1.3vw;
     margin-left: 5px;
+    animation: p-fade-in 4s;
 }
 
-@media (max-width: 1600px) {
-    #greeting-text h1 {
-        -webkit-text-stroke-width: 3px;
+@keyframes p-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+        translate: 0% 40%;
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0% 0%;
     }
 }
 
-@media (max-width: 1200px) {
-    #greeting-text h1 {
-        -webkit-text-stroke-width: 2px;
-    }
+#greeting-text a {
+    color: white;
 }
 
+#greeting-text a:hover {
+    color: var(--light);
+}
+
+#greeting-text a:visited {
+    text-decoration: none;
+}
 
 #about-section {
 
